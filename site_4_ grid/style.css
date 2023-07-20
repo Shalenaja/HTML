@@ -116,19 +116,25 @@ a {
 .info_img_1 {
     top: 15px;
     left: -7px;
-    position: absolute;   
+    position: absolute;
+    border: solid #FAFAFA;
+    border-width: 0px 8px 0px 7px;  
 }
 
 .info_img_2 {
     top: 1px;
     left: 387px;
-    position: absolute;   
+    position: absolute;
+    border: solid #FAFAFA;
+    border-width: 8px 13px 0px 13px;
 }
 
 .info_img_3 {
     top: -8px;
     right: -22px;
     position: absolute;
+    border: solid #FAFAFA;
+    border-width: 8px 22px 0px 8px;
 }
 
 .heading {

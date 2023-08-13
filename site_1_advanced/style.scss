@@ -48,9 +48,15 @@ a {
     }
 
     &_right {
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
+        display: -webkit-box;
         gap: 32px;
     } 
 }
@@ -71,17 +77,33 @@ a {
         left: 390px;
         visibility: hidden;
         opacity: 0;
+        -webkit-transition-duration: 1s;
         transition-duration: 1s;    
+        -webkit-transition-delay: 0.15s;    
+        -o-transition-delay: 0.15s;    
         transition-delay: 0.15s;
+        -o-transition-duration: 1s;
     
         &_content { 
-            display: flex;  
-            flex-direction: column; 
-            flex-wrap: wrap;    
+            display: -webkit-box; 
+            display: -ms-flexbox; 
+            display: flex;             
+            -webkit-box-orient: vertical;             
+            -webkit-box-direction: normal;             
+            -ms-flex-direction: column;             
+            flex-direction: column;          
+            -ms-flex-wrap: wrap;          
+            flex-wrap: wrap;
+
             li {
                 list-style-type: none;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex; 
+                -webkit-box-orient: vertical; 
+                -webkit-box-direction: normal; 
                 flex-direction: column;   
+                -ms-flex-direction: column; 
             }
             ul {
                 margin-left: 0; 
@@ -122,9 +144,12 @@ a {
     }
 }
 
-.menu:hover .menu_box {  
-    box-shadow: 0 0 10px blue;
+.menu:hover .menu_box {     
+    -webkit-transform: translate(-246px);     
+    -ms-transform: translate(-246px);     
     transform: translate(-246px);
+    -webkit-box-shadow: 0 0 10px blue;
+    box-shadow: 0 0 10px blue;
     visibility: visible; 
     opacity: 1;
 }
@@ -161,8 +186,13 @@ a {
 .box {
     background-color: $color_Back;
     height: 1313px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -ms-flex-direction: column;
     position: relative;
 }
 
@@ -177,6 +207,7 @@ a {
         width: inherit;
         position: relative;
         text-align: center;
+        -webkit-box-shadow: 0 0 3px $colorSelectSite;
         box-shadow: 0 0 3px $colorSelectSite;
         margin: 10px auto 42px;     
     }
@@ -188,9 +219,15 @@ a {
 
     #slider .image {
         width: 400%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-align: center;
     }
 
     #overflow {
@@ -337,7 +374,9 @@ a {
 }
 
 .product-box {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: $thirdSite $gapGrid $thirdSite $gapGrid $thirdSite;
     grid-template-columns: repeat(3, $thirdSite);
     gap: $gapGrid;
     margin-top: 129px;
@@ -346,16 +385,26 @@ a {
 
 .product {
     width: $thirdSite;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -ms-flex-direction: column;
     &_img {
         width: 100%;
     }
     &_content {
         background-color: #F8F8F8;
         padding: 24px 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
         flex-direction: column;
+        -ms-flex-direction: column;
         gap: 16px;
     }
     &_name {
@@ -396,7 +445,9 @@ a {
     bottom: 0;
     padding-left: 230px; 
     padding-top: 97px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: ($widthSite / 2);
     grid-template-columns: repeat(2, $widthSite / 2);     
    
     &_left { 
@@ -446,8 +497,13 @@ a {
             margin-bottom: 27px;
         }
         &_subscription {  
+            display: -webkit-box;  
+            display: -ms-flexbox;  
             display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
             justify-content: flex-start;
+            
             &_email {
                 background-color: #E1E1E1;
                 color: $colorText;
@@ -480,6 +536,8 @@ a {
                 color: blue;
                 font-size: 18px;  
                 border: 2px solid blue;            
+                -webkit-transition: color 2s;            
+                -o-transition: color 2s;            
                 transition: color 2s;
             }
             &_button:active {
@@ -514,7 +572,9 @@ a {
     
     &_social {
         width: 70px; 
+        display: -ms-grid; 
         display: grid;
+        -ms-grid-columns: 50% 7px 50%;
         grid-template-columns: repeat(2, 50%);
         gap: 7px;  
   
@@ -535,7 +595,3 @@ a {
         }
     }
 }
-
-
-
-
